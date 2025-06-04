@@ -1,0 +1,20 @@
+{
+  "name": "love-website",
+  "version": "1.0.0",
+  "description": "A love-themed React website for Dhananjay Raut",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.4.3",
+    "framer-motion": "^7.6.1"
+  },
+  "devDependencies": {
+    "vite": "^4.5.14",
+    "@vitejs/plugin-react": "^4.0.0"
+  }
+}
