@@ -14,7 +14,8 @@ function HomePage({ onLogout }) {
     '/images/profile3.jpg',
     '/images/profile4.jpg',
     '/images/profile5.jpg',
-    
+    '/images/profile6.jpg',
+    '/images/profile7.jpg',
   ];
 
   useEffect(() => {
@@ -40,7 +41,7 @@ function HomePage({ onLogout }) {
 
   const handleEmojiClick = (emoji, thoughtText, animationType) => {
     setThought({ emoji, text: thoughtText, animationType });
-    setTimeout(() => setThought(null), 3000); // Clear thought after 3 seconds
+    setTimeout(() => setThought(null), 5000); // Clear thought after 5 seconds
   };
 
   const handleProfileClick = () => {
@@ -56,7 +57,7 @@ function HomePage({ onLogout }) {
       <EmojiRow onEmojiClick={handleEmojiClick} />
       {thought && (
         <motion.div
-          className="absolute top-1/3 left-1/2 transform -translate-x-1/2 bg-pink-100 p-4 rounded-lg shadow-lg text-pink-700 text-xl z-10"
+          className="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-pink-100 p-4 rounded-lg shadow-lg text-pink-700 text-xl z-50"
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
@@ -115,12 +116,11 @@ function HomePage({ onLogout }) {
           onClick={handleProfileClick}
         />
         <h2 className="text-2xl text-pink-700 mt-4 font-bold">Dhananjay</h2>
-        <p className="text-pink-600 font-bold">DOB: 06/12/2009</p>
+        <p className="text-pink-600 font-bold">DOB: 06/12/2002</p>
       </motion.div>
       <div className="max-w-2xl mx-auto mt-8 p-4 border-4 border-white rounded-lg shadow-lg">
         <p className="text-pink-800 font-extrabold font-josefin">
-          {/* Add your paragraph about Dhananjay here */}
-        Allu, there are not enough words in the world to describe how much you mean to me, but I’ll still try. You’ve always been more than just a friend—you're like family to me, someone who’s been by my side through every high and low. Our bond isn’t ordinary; it’s rare, strong, and real. We've laughed together like there's no tomorrow, argued like siblings, and stood by each other like warriors in the same battle. Life hasn't always been fair or easy, but the way you carry yourself with strength and resilience is something I deeply admire.
+          Allu, there are not enough words in the world to describe how much you mean to me, but I’ll still try. You’ve always been more than just a friend—you're like family to me, someone who’s been by my side through every high and low. Our bond isn’t ordinary; it’s rare, strong, and real. We've laughed together like there's no tomorrow, argued like siblings, and stood by each other like warriors in the same battle. Life hasn't always been fair or easy, but the way you carry yourself with strength and resilience is something I deeply admire.
 
 You have this silent strength in you, Allu—a kind that doesn’t shout but shines when it’s needed the most. I’ve seen you during your best days, and I’ve stood with you during the tough ones too. No matter how bad a day got, you somehow managed to keep going, even when the weight of the world felt too heavy. And that’s what makes you truly strong. Not just surviving, but still being kind, still being you, still moving forward when everything in you felt like giving up.
 
